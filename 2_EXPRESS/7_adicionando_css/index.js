@@ -9,6 +9,9 @@ app.use(express.urlencoded({
 }))
 //transforma as informações em objetos do javascript.
 app.use(express.json())
+
+//itilizar arquivos em objetos do JS
+app.use(express.static('public'))
 app.post('/users/save', (req, res) => {
     //console.log(req.body)
     const nome = req.body.nome
